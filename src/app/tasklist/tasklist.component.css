@@ -1,0 +1,63 @@
+h1{
+  display: flex;
+  justify-content: center;
+  font-size: 60px;
+  background: linear-gradient(to right, rgb(160, 159, 236), blue);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.mat-success {
+  background-color: rgb(46, 173, 46);
+  color: #fff;
+}
+
+mat-card {
+    width: 800px;
+    margin: 32px auto;
+    padding: 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  mat-form-field {
+    width: 100%;
+  }
+  
+  textarea {
+    height: 120px;
+  }
+
+.todo.done{
+  background-color: rgb(152, 233, 149);
+}
+
+.noTasks{
+  display: flex;
+  justify-content: center;
+  font-size: large;
+  font-weight: bold;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 16px;
+}
+
+.button-container button {
+  margin: 0 8px;
+}
+
+.full-width {
+  margin: auto;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  width: 200px;
+}

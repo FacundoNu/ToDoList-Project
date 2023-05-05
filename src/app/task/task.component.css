@@ -1,0 +1,19 @@
+mat-card {
+    width: 800px;
+    margin: 32px auto;
+    padding: 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  mat-form-field {
+    width: 100%;
+  }
+
+  .mat-success {
+    background-color: rgb(46, 173, 46);
+    color: #fff;
+  }
+
+.done{
+    background-color: rgb(152, 233, 149);
+  }

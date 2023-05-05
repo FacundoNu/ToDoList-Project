@@ -1,0 +1,16 @@
+<mat-card [ngClass]="{'done': todo.completed}">
+  <mat-list-item >
+    <span matListItemTitle>{{ todo.title }}</span>
+    <span matListItemLine>{{ todo.priority }}</span>
+    <span matListItemLine>{{ todo.description }}</span>
+  </mat-list-item>
+  <mat-card-actions style="display: flex; justify-content: flex-end;">
+    <button mat-mini-fab color="primary" (click)="editTodo()" aria-label="Example icon button with an edit icon" style="margin-right: 8px;">
+      <mat-icon>edit</mat-icon>
+    </button>
+    <button mat-mini-fab color="warn" (click)="deleteTodo()" aria-label="Example icon button with a delete icon" style="margin-right: 8px;">
+      <mat-icon>delete</mat-icon>
+    </button>
+    <ng-content></ng-content>
+  </mat-card-actions>
+</mat-card>

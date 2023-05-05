@@ -1,0 +1,50 @@
+<h1>Todos task list</h1>
+
+<mat-card>
+    <mat-form-field>
+      <mat-label>Title</mat-label>
+      <input matInput #titleInput>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Priority</mat-label>
+      <mat-select #priorityInput>
+        <mat-option value="Low">Low</mat-option>
+        <mat-option value="Medium">Medium</mat-option>
+        <mat-option value="High">High</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Description</mat-label>
+      <textarea matInput #descriptionInput></textarea>
+    </mat-form-field>
+
+    <button mat-flat-button color="primary" (click)="onAddTask(titleInput.value, priorityInput.value, descriptionInput.value); clearInputs(titleInput, priorityInput, descriptionInput);">Add task</button>
+</mat-card>
+
+<div class="button-container">
+  <button mat-flat-button color="primary" (click)="markAllAsDone()">Mark all as done</button>
+  <button mat-flat-button color="warn" (click)="deleteAllCompleted()">Delete all completed</button>
+</div>
+
+<div class="full-width">
+  <mat-form-field appearance="fill" >
+    <mat-label>Sort by</mat-label>
+    <mat-select #selectComponent (selectionChange)="onSortChange($event, selectComponent)">
+      <mat-option value="completed">Completed</mat-option>
+      <mat-option value="priority">Priority</mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>
+
+<mat-list>
+  <app-task *ngFor="let todo of todos; let i = index" [todo]="todo" (delete)="deleteTask(i)" (edit)="editTask(i)">
+    <button mat-mini-fab color="success" (click)="toggleDone(i)" aria-label="Example icon button with a done icon">
+      <mat-icon>done</mat-icon>
+    </button>
+  </app-task>
+  
+  <mat-card *ngIf="(todos.length == 0)">
+    <mat-card-content class="noTasks">There are no tasks to do. Add one!</mat-card-content>
+  </mat-card>
+</mat-list>
+

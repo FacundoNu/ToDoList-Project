@@ -1,0 +1,20 @@
+<mat-card>
+    <h2>Edit Task</h2>
+    <mat-form-field>
+      <mat-label>Title</mat-label>
+      <input matInput [(ngModel)]="todo.title">
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Priority</mat-label>
+      <mat-select [(ngModel)]="todo.priority">
+        <mat-option value="Low">Low</mat-option>
+        <mat-option value="Medium">Medium</mat-option>
+        <mat-option value="High">High</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Description</mat-label>
+      <textarea matInput [(ngModel)]="todo.description"></textarea>
+    </mat-form-field>
+    <button mat-flat-button color="primary" (click)="save()">Save</button>
+  </mat-card>
