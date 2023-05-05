@@ -1,21 +1,21 @@
 # ToDoListProject
 
 This project use Angular and Angular material.
-A continuación se detallan las funcionalidades del mismo:
--Se puede agregar una tarea con titulo, prioridad y descripción al apretar el botón "Agregar task".
+Its functionalities are detailed below:
+-You can add a task with title, priority and description by pressing the "Add task" button.
 
--Cada tarea puede ser editada, eliminada y completada.
+-Each task can be edited, deleted and completed.
 
-Al editarse, abrira una formulario de edición con los datos de tarea. Al darle a "Guardar" la misma será modificada.
+When edited, it will open an editing form with the task data. By clicking "Save" it will be modified.
 
-Al eliminarse se quitara la tarea de la lista.
+When deleted, the task will be removed from the list.
 
-Al completarse el color de fondo de la tarea se volverá verde.
+Upon completion the background color of the task will turn green.
 
--Debajo del botón "Agregar tarea" también contamos con dos botones:
+-Below the "Add task" button we also have two buttons:
 
-El botón "Mark all as done" se encarga de completar todas las tareas de la lista.
+The "Mark all as done" button takes care of completing all the tasks on the list.
 
-El botón "Delete all completed" se encarga de eliminar de la lista aquellas tareas ya hechas.
+The "Delete all completed" button is responsible for removing tasks that have already been completed from the list.
 
--Por último, debajo de los botones anteriores, contamos con un select que tiene la funcionalidad de ordenar nuestras tareas en base a su prioridad (de mayor a menor) o si están hechas o no.
+-Finally, below the previous buttons, we have a select that has the functionality of ordering our tasks based on their priority (from highest to lowest) or if they are done or not.
